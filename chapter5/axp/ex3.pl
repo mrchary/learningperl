@@ -5,6 +5,7 @@ print "Column width? ";
 chomp( my $width = <STDIN> );
 
 die "Not a positive integer!\n" if ( $width !~ /^\d+$/ );
+die "That's too wide!\n" if ( $width > 999 );
 
 say "Now give me some data!";
 chomp( my @data = <STDIN> );

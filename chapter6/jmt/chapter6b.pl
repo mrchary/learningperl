@@ -16,11 +16,8 @@ use 5.014;
 say "Enter a series of words:";
 chomp (my @words = <STDIN>);
 
-my %totals;
+my %totals = ();
 foreach (@words){
-	if (!defined $totals{$_}){ #this 'automatically converting to 0' thing is bullshit AFAICS
-		$totals{$_} = 0;
-	}
 	$totals{$_} ++;
 }
 

@@ -4,5 +4,5 @@ use 5.012;
 use warnings;
 
 # Looking for two identical consecutive nonwhitespace characters
-print grep( /(.)\1/, <> );
+print grep( /(\S)\1/, <> );
 

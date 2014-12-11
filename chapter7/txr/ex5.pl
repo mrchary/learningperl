@@ -5,7 +5,7 @@ use 5.12.0;
 
 chomp (my @lines = <>);
 foreach (@lines) {
-  if (/(.)\g{1}/) {
+  if (/(\D)\g{1}/) {
     say $_;
   }
 }

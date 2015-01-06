@@ -16,7 +16,7 @@ if ( ! @ARGV ) {
     if ( /##Copyright (C) / ) {
       $copyright_exists = 1;
       last;
-    } else if ( $. > 2 ) {
+    } elsif ( $. > 2 ) {
       last;
     }
   }

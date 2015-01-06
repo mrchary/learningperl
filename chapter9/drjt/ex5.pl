@@ -25,7 +25,6 @@ if ( ! @ARGV ) {
     while (<>) {
       if ( $. == 1 ) {
         s[(#!/usr/bin/.*\n)][$1  ##Copyright (C) 2015 by David Thrussell\n];
-        $copyright_exists = 1;
       }
       print;
     }

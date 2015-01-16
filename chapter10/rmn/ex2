@@ -8,7 +8,7 @@ my $secret = int( 1 + rand $range );
 
 $debug && say "secret is $secret";
 
-my @reaction = ( 'too low', 'bang on!', 'too high' );
+my @reaction = ( 'bang on!', 'too high', 'too low' );
 
 while ( <> ) {
   chomp;
@@ -22,11 +22,10 @@ while ( <> ) {
     next;
   }
 
-  my $d = $_ - $secret;
-  $d /= abs $d if $d;
+  my $d = $_ <=> $secret;
 
   $debug && say "reaction index is $d";
 
-  say $reaction[ $d + 1 ];
+  say $reaction[ $d ];
   last unless $d;
 }

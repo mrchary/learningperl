@@ -12,7 +12,7 @@ my $then;
 eval {
     $then = DateTime->new( year => $ARGV[0], month => $ARGV[1], day => $ARGV[2] );
 }
-or die "Not a valid date: " . join( '-',  @ARGV ) . "\n";
+or die "Date does not exist: " . join( '-',  @ARGV ) . "\n";
 
 my $now = DateTime->today; # Don't use DateTime->now, or we get out-by-one errors
 my $duration = $now - $then;

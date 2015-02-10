@@ -9,4 +9,4 @@ my %last_name = qw{
   betty rubble Bamm-Bamm Rubble PEBBLES FLINTSTONE
 };
 
-say "$_ $last_name{$_}" foreach ( sort { "\L$last_name{$a}" cmp "\L$last_name{$b}" } keys %last_name );
+say "$_ $last_name{$_}" foreach ( sort { "\L$last_name{$a}" cmp "\L$last_name{$b}" or "\L$a" cmp "\L$b" } keys %last_name );

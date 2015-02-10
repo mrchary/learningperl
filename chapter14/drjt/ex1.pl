@@ -14,4 +14,4 @@ sub maxlength {
 
 my @nums = sort { $a <=> $b } @ARGV;
 my $length = maxlength @nums;
-printf "%${length}d\n", $_ foreach @nums;
+printf "%${length}g\n", $_ foreach @nums;

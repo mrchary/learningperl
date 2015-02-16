@@ -25,5 +25,5 @@ pop @high_divisors if ( @divisors && ( $high_divisors[0] == $divisors[-1] ) );
 push @divisors, @high_divisors;
 
 say "$number is " . ( $divisors[0] == 2 ? "even" : "odd" );
-say "$number is divisible by thirteen" if ( { map { $_ => 1 } @divisors }->{13} );
+say "$number is divisible by thirteen" if ( grep { $_ == 13 } @divisors );
 say ( ( @divisors == 1 ) ? "$number is prime" : "Divisors: " . join( ", ", @divisors ) );

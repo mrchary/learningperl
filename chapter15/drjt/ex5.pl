@@ -12,7 +12,7 @@ given( $ARGV[0] ) {
   when( &divisors($_) ) { 
       my @divisors = &divisors($_);
       say join( ' ', @divisors ); 
-      say ( 2 ~~ @divisors ) ? "$_ is even" : "$_ is odd";
+      say( ( 2 ~~ @divisors ) ? "$_ is even" : "$_ is odd" );
     }
   default { say "$_ is prime!" }
 }
